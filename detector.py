@@ -12,13 +12,13 @@ GPIO.setwarnings(False)
 
 url = "https://www.fast2sms.com/dev/bulk"
 
-querystring = {"authorization":"PkF0huYdzo3AVZraHMIGxp5N284mjJU6S7cgiWtyvRXDwLnKsE14s2IJiSmz7Yc5ApafRM6ulhe3wNVF","sender_id":"FSTSMS","message":"Suspicious Activty or in your House.Please Check the Video Feed in the App.","language":"english","route":"p","numbers":"6369257709"}
+querystring = {"authorization":"Fast2sms API key","sender_id":"FSTSMS","message":"Suspicious Activty in your House.Please Check the Video Feed in the App.","language":"english","route":"p","numbers":"#mobile No to recieve"}
 
 headers = {
     'cache-control': "no-cache"
 }
 
-faceDetect = cv2.CascadeClassifier(r'''/home/pi/Desktop/haarcascade_frontalface_default.xml''');
+faceDetect = cv2.CascadeClassifier(r'''/home/pi/Desktop/haarcascade_frontalface_default.xml''');//Add location of haarcascade_frontface_default
 cam = cv2.VideoCapture(-1);
 rec = cv2.face.LBPHFaceRecognizer_create();
 rec.read("/home/pi/recognizer/trainingData.yml");
