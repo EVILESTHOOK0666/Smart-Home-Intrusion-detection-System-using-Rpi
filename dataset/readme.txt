@@ -1,0 +1,1 @@
+The images captured during dataset creator are stored here.Delete this file afterwards.
